@@ -11,7 +11,7 @@ int getSize(char *input){
     return i;
 }
 
-int getSize(int *input){
+int getSizeInt(int *input){
 //  Returns size of an INT array
     int i=0;
     while(input[i]!= -1)
@@ -32,8 +32,6 @@ int main(){
     int         intIndex=0; //to control numInt
 
     /** Loop from here  **/
-    while(true){
-
         //reset vars
         strcpy(input, "\0");
         strcpy(output, "\0");
@@ -72,9 +70,9 @@ int main(){
 
         //sort
         int temp = 0;
-         for(int i=0; i<getSize(numInt); i++)
+         for(int i=0; i<getSizeInt(numInt); i++)
         {
-            for(int j=i+1; j<getSize(numInt); j++)
+            for(int j=i+1; j<getSizeInt(numInt); j++)
             {
                 if(numInt[j] < numInt[i])
                 {
@@ -85,7 +83,7 @@ int main(){
             }
     }
         printf("\n");
-        for(int i=0;i<getSize(numInt); ++i) printf("%d ", numInt[i]);
+        for(int i=0;i<getSizeInt(numInt); ++i) printf("%d ", numInt[i]);
         printf("\n");
-    }
+    
 }
